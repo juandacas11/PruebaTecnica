@@ -1,3 +1,28 @@
+function CalcularNumeros(){
+    
+    let arreglo = document.getElementById("num1").value
+    arreglo=arreglo.split(",").map((numero)=>{
+        return parseInt(numero)
+
+    })
+    console.log(arreglo)
+
+    let numero = document.getElementById("num2").value
+    console.log(numero)
+
+    
+    let resultado = findClosestSum(arreglo,numero)
+    console.log(resultado)
+
+    document.getElementById("resultado").innerHTML=JSON.stringify(resultado)
+
+    
+
+
+
+}
+
+
 function findClosestSum(arr, x) {
     // ordenar el arreglo en orden ascendente
     arr.sort((a, b) => a - b);
